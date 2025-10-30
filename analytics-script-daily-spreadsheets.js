@@ -1,17 +1,17 @@
 // Google Apps Script 代码 - 网站访问统计系统（每日独立表格版本）
-// 主控制表格 ID: 1kEvOkFHVQ92HK0y7I1-8qEjfzYrwt0DFQWEiVNTqXS4
+// 主控制表格 ID: 10bl6VeRSD1VXP_yw4Vciar_MpmwFc90CKk7lyzJq0rk
 // 
 // 架构说明：
 // - 主表格：用于控制台、统计汇总、表格索引
 // - 每日表格：每天自动创建新的独立表格，包含当天的详细数据和广告引导数据
-// - 表格命名：ads-recan-2025-01-15
+// - 表格命名：ads3-work-2025-01-15
 // - 文件夹：所有每日表格存放在"网站统计数据"文件夹中
 
 // ==================== 配置常量 ====================
 
-const MAIN_SPREADSHEET_ID = '1kEvOkFHVQ92HK0y7I1-8qEjfzYrwt0DFQWEiVNTqXS4';
+const MAIN_SPREADSHEET_ID = '10bl6VeRSD1VXP_yw4Vciar_MpmwFc90CKk7lyzJq0rk';
 const DATA_FOLDER_NAME = '网站统计数据';
-const SPREADSHEET_PREFIX = 'ads-recan-';
+const SPREADSHEET_PREFIX = 'ads3-work-';
 
 // ==================== 主入口函数 ====================
 
