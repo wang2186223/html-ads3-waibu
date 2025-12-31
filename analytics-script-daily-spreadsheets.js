@@ -83,8 +83,11 @@ function getOrCreateDailySpreadsheet(dateString) {
     spreadsheetId = findSpreadsheetIdFromIndex(indexSheet, dateString);
     if (spreadsheetId) {
       try {
+        const spreadsheet = SpreadsheetApp.openById(spreadsheetId);
+        // 确保必需的sheet存在
+        ensureSheetsExist(spreadsheet, dateString);
         lock.releaseLock();
-        return SpreadsheetApp.openById(spreadsheetId);
+        return spreadsheet;
       } catch (e) {
         console.log('索引中的表格ID无效');
       }
@@ -97,6 +100,8 @@ function getOrCreateDailySpreadsheet(dateString) {
     if (files.hasNext()) {
       const file = files.next();
       const spreadsheet = SpreadsheetApp.openById(file.getId());
+      // 确保必需的sheet存在（可能是并发创建导致未初始化完成）
+      ensureSheetsExist(spreadsheet, dateString);
       // 找到文件后添加到索引（允许重复索引，不影响数据）
       addToIndex(indexSheet, dateString, file.getId(), file.getUrl());
       lock.releaseLock();
@@ -114,6 +119,9 @@ function getOrCreateDailySpreadsheet(dateString) {
     // 初始化表格结构
     initializeDailySpreadsheet(newSpreadsheet, dateString);
     
+    // 再次确保所有sheet都已创建（双重保险）
+    ensureSheetsExist(newSpreadsheet, dateString);
+    
     // 添加到索引（允许重复索引，不影响数据）
     addToIndex(indexSheet, dateString, newSpreadsheet.getId(), newSpreadsheet.getUrl());
     
@@ -129,6 +137,60 @@ function getOrCreateDailySpreadsheet(dateString) {
       return SpreadsheetApp.openById(files.next().getId());
     }
     throw new Error('无法创建或获取每日表格');
+  }
+}
+
+/**
+ * 确保必需的sheet存在，如果不存在则创建
+ * @param {Spreadsheet} spreadsheet - 表格对象
+ * @param {string} dateString - 日期字符串
+ */
+function ensureSheetsExist(spreadsheet, dateString) {
+  try {
+    // 检查并创建"页面访问"sheet
+    let visitSheet = spreadsheet.getSheetByName('页面访问');
+    if (!visitSheet) {
+      console.log('创建缺失的"页面访问"sheet');
+      visitSheet = spreadsheet.insertSheet('页面访问');
+      visitSheet.getRange(1, 1, 1, 4).setValues([['时间', '访问页面', '用户属性', 'IP地址']]);
+      const visitHeader = visitSheet.getRange(1, 1, 1, 4);
+      visitHeader.setBackground('#4285f4').setFontColor('white').setFontWeight('bold');
+      visitSheet.setColumnWidth(1, 150);
+      visitSheet.setColumnWidth(2, 300);
+      visitSheet.setColumnWidth(3, 200);
+      visitSheet.setColumnWidth(4, 120);
+    }
+    
+    // 检查并创建"广告引导"sheet
+    let adGuideSheet = spreadsheet.getSheetByName('广告引导');
+    if (!adGuideSheet) {
+      console.log('创建缺失的"广告引导"sheet');
+      adGuideSheet = spreadsheet.insertSheet('广告引导');
+      adGuideSheet.getRange(1, 1, 1, 9).setValues([
+        ['时间', '访问页面', '用户属性', 'IP地址', '累计广告数', '当前页广告数', '触发次数', '最大触发次数', '事件时间戳']
+      ]);
+      const adGuideHeader = adGuideSheet.getRange(1, 1, 1, 9);
+      adGuideHeader.setBackground('#FF6B6B').setFontColor('white').setFontWeight('bold');
+      adGuideSheet.setColumnWidth(1, 150);
+      adGuideSheet.setColumnWidth(2, 300);
+      adGuideSheet.setColumnWidth(3, 200);
+      adGuideSheet.setColumnWidth(4, 120);
+      adGuideSheet.setColumnWidth(5, 100);
+      adGuideSheet.setColumnWidth(6, 120);
+      adGuideSheet.setColumnWidth(7, 100);
+      adGuideSheet.setColumnWidth(8, 120);
+      adGuideSheet.setColumnWidth(9, 180);
+    }
+    
+    // 检查并创建"当日统计"sheet
+    let summarySheet = spreadsheet.getSheetByName('📊当日统计');
+    if (!summarySheet) {
+      console.log('创建缺失的"📊当日统计"sheet');
+      summarySheet = spreadsheet.insertSheet('📊当日统计', 0);
+      initializeDailySummary(summarySheet, dateString);
+    }
+  } catch (error) {
+    console.error('确保sheet存在时出错:', error);
   }
 }
 
@@ -275,37 +337,52 @@ function addToIndex(indexSheet, dateString, spreadsheetId, spreadsheetUrl) {
  * 处理页面访问事件
  */
 function handlePageVisitEvent(dailySpreadsheet, data) {
-  const visitSheet = dailySpreadsheet.getSheetByName('页面访问');
+  let visitSheet = dailySpreadsheet.getSheetByName('页面访问');
   
   if (!visitSheet) {
-    console.error('页面访问sheet不存在！');
-    return;
+    console.error('页面访问sheet不存在！尝试创建...');
+    try {
+      // 尝试创建缺失的sheet
+      visitSheet = dailySpreadsheet.insertSheet('页面访问');
+      visitSheet.getRange(1, 1, 1, 4).setValues([['时间', '访问页面', '用户属性', 'IP地址']]);
+      const visitHeader = visitSheet.getRange(1, 1, 1, 4);
+      visitHeader.setBackground('#4285f4').setFontColor('white').setFontWeight('bold');
+      visitSheet.setColumnWidth(1, 150);
+      visitSheet.setColumnWidth(2, 300);
+      visitSheet.setColumnWidth(3, 200);
+      visitSheet.setColumnWidth(4, 120);
+      console.log('页面访问sheet创建成功');
+    } catch (e) {
+      console.error('创建页面访问sheet失败:', e);
+      return;
+    }
   }
-  
-  const rowData = [
-    getTimeString(),              // 时间
-    data.page || '',              // 访问页面
-    data.userAgent || '',         // 用户属性
-    data.userIP || 'Unknown'      // IP地址
-  ];
-  
-  visitSheet.appendRow(rowData);
-  
-  // 5%概率更新当日统计
-  if (Math.random() < 0.05) {
-    updateDailySummary(dailySpreadsheet);
-  }
-}
-
-/**
- * 处理广告引导事件
- */
-function handleAdGuideEvent(dailySpreadsheet, data) {
-  const adGuideSheet = dailySpreadsheet.getSheetByName('广告引导');
+  let adGuideSheet = dailySpreadsheet.getSheetByName('广告引导');
   
   if (!adGuideSheet) {
-    console.error('广告引导sheet不存在！');
-    return;
+    console.error('广告引导sheet不存在！尝试创建...');
+    try {
+      // 尝试创建缺失的sheet
+      adGuideSheet = dailySpreadsheet.insertSheet('广告引导');
+      adGuideSheet.getRange(1, 1, 1, 9).setValues([
+        ['时间', '访问页面', '用户属性', 'IP地址', '累计广告数', '当前页广告数', '触发次数', '最大触发次数', '事件时间戳']
+      ]);
+      const adGuideHeader = adGuideSheet.getRange(1, 1, 1, 9);
+      adGuideHeader.setBackground('#FF6B6B').setFontColor('white').setFontWeight('bold');
+      adGuideSheet.setColumnWidth(1, 150);
+      adGuideSheet.setColumnWidth(2, 300);
+      adGuideSheet.setColumnWidth(3, 200);
+      adGuideSheet.setColumnWidth(4, 120);
+      adGuideSheet.setColumnWidth(5, 100);
+      adGuideSheet.setColumnWidth(6, 120);
+      adGuideSheet.setColumnWidth(7, 100);
+      adGuideSheet.setColumnWidth(8, 120);
+      adGuideSheet.setColumnWidth(9, 180);
+      console.log('广告引导sheet创建成功');
+    } catch (e) {
+      console.error('创建广告引导sheet失败:', e);
+      return;
+    }
   }
   
   const rowData = [
