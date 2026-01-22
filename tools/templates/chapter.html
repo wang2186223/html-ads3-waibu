@@ -1296,8 +1296,8 @@
                     console.log(`Ad guide: Using stored required ads: ${value}`);
                     return value;
                 }
-                // First time, generate random value between 1-30
-                const randomValue = Math.floor(Math.random() * 30) + 1;
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
                 localStorage.setItem('adGuideRequiredAds', randomValue.toString());
                 console.log(`Ad guide: Generated new required ads: ${randomValue}`);
                 return randomValue;
@@ -1311,8 +1311,8 @@
                     console.log(`Ad guide: Using stored required ads: ${value}`);
                     return value;
                 }
-                // First time, generate random value between 1-30
-                const randomValue = Math.floor(Math.random() * 30) + 1;
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
                 localStorage.setItem('adGuideRequiredAds', randomValue.toString());
                 console.log(`Ad guide: Generated new required ads: ${randomValue}`);
                 return randomValue;
