@@ -129,10 +129,10 @@
     
     <!-- Time Meta Tags for SEO -->
     
-    <meta property="article:published_time" content="2025-11-07T13:29:57.628989">
-    <meta property="article:modified_time" content="2025-11-07T13:29:57.628989">
-    <meta name="date" content="2025-11-07">
-    <meta name="last-modified" content="2025-11-07 13:29:57">
+    <meta property="article:published_time" content="2026-02-04T15:08:38.810130">
+    <meta property="article:modified_time" content="2026-02-04T15:08:38.810130">
+    <meta name="date" content="2026-02-04">
+    <meta name="last-modified" content="2026-02-04 15:08:38">
     
     
     <!-- Open Graph Meta Tags -->
@@ -162,6 +162,7 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
          crossorigin="anonymous"></script>
+
     
     <!-- Facebook Pixel Code -->
     <script>
@@ -174,7 +175,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '835106315764533');
+    fbq('init', '747225277772713');
     
     // Natural 72-hour event tracking prevention (resets every 3 days)
     function shouldTrackEvent(eventName) {
@@ -210,21 +211,29 @@
         const readingTime = (currentTime - readingStartTime) / 1000 / 60; // in minutes
         
         if (!oneMinuteSent && readingTime >= 1) {
-            if (shouldTrackEvent('1m_web')) {
-                fbq('track', '1m_web');
-                console.log('Facebook事件已发送: 1m_web (用户阅读1分钟)');
+            if (shouldTrackEvent('ReadOneMinute')) {
+                fbq('trackCustom', 'ReadOneMinute', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 1
+                });
+                console.log('Facebook事件已发送: ReadOneMinute (用户阅读1分钟)');
             } else {
-                console.log('Facebook事件已跳过: 1m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadOneMinute (本72小时内已发送)');
             }
             oneMinuteSent = true;
         }
         
         if (!tenMinutesSent && readingTime >= 10) {
-            if (shouldTrackEvent('10m_web')) {
-                fbq('track', '10m_web');
-                console.log('Facebook事件已发送: 10m_web (用户阅读10分钟)');
+            if (shouldTrackEvent('ReadTenMinutes')) {
+                fbq('trackCustom', 'ReadTenMinutes', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 10
+                });
+                console.log('Facebook事件已发送: ReadTenMinutes (用户阅读10分钟)');
             } else {
-                console.log('Facebook事件已跳过: 10m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadTenMinutes (本72小时内已发送)');
             }
             tenMinutesSent = true;
         }
@@ -241,7 +250,7 @@
     });
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=835106315764533&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=747225277772713&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
     
@@ -259,7 +268,7 @@
             };
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -278,7 +287,7 @@
                 userIP: 'Unknown'
             };
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -340,7 +349,7 @@
             console.log('Ad guide: Sending data to Google Apps Script:', data);
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -371,7 +380,7 @@
             
             console.log('Ad guide: Sending data with Unknown IP:', data);
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -712,8 +721,8 @@
             "@type": "Person",
             "name": "Unknown Author"
         },
-        "datePublished": "2025-11-07T13:29:57.628989",
-        "dateModified": "2025-11-07T13:29:57.628989",
+        "datePublished": "2026-02-04T15:08:38.810130",
+        "dateModified": "2026-02-04T15:08:38.810130",
         "publisher": {
             "@type": "Organization",
             "name": "NovelVibe",
@@ -794,13 +803,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Some were curious. Some were scrutinizing. And one was particularly venomous.</p>
-                
-                
-                
                 
                 
                 
@@ -810,34 +813,12 @@
                 
                 
                 
-                
-                
-                
                 <p>She&#39;d been closely following Melissa Lee&#39;s case. Though Winston had returned abroad, he kept in touch.</p>
                 
                 
                 
                 
-                
-                
-                
                 <p>Lance had made it clear—they wouldn&#39;t let Melissa off the hook.</p>
-                
-                
-                <!-- AdSense In-Article Ad after fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="2860480551"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
-                
                 
                 
                 
@@ -847,13 +828,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Melissa was his pride and joy, his greatest achievement.</p>
-                
-                
-                
                 
                 
                 
@@ -863,13 +838,7 @@
                 
                 
                 
-                
-                
-                
                 <p>In his eyes, Evelyn was to blame for everything.</p>
-                
-                
-                
                 
                 
                 
@@ -879,13 +848,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Given the chance, he&#39;d make sure Evelyn joined her short-lived parents underground.</p>
-                
-                
-                
                 
                 
                 
@@ -895,13 +858,7 @@
                 
                 
                 
-                
-                
-                
                 <p>As everyone took their seats, the meeting began.</p>
-                
-                
-                
                 
                 
                 
@@ -911,26 +868,7 @@
                 
                 
                 
-                
-                
-                
                 <p>A flicker of recognition passed through her when she saw his face.</p>
-                
-                
-                
-                <!-- AdSense In-Article Ad after fifteenth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="1547398888"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
                 
                 
                 
@@ -940,13 +878,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Noticing her gaze, Vincent gave her a polite nod.</p>
-                
-                
-                
                 
                 
                 
@@ -956,13 +888,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The meeting proceeded with orderly precision.</p>
-                
-                
-                
                 
                 
                 
@@ -972,13 +898,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The atmosphere was heavy with tension.</p>
-                
-                
-                
                 
                 
                 
@@ -988,13 +908,7 @@
                 
                 
                 
-                
-                
-                
                 <p>As a child, she&#39;d often been brought to Kingsley Group meetings. While Alexander conducted business, she&#39;d wait in the lounge with snacks.</p>
-                
-                
-                
                 
                 
                 
@@ -1004,26 +918,7 @@
                 
                 
                 
-                
-                
-                
                 <p>When her turn came, Evelyn systematically addressed each point from HR&#39;s provided outline.</p>
-                
-                
-                
-                
-                <!-- AdSense In-Article Ad after twenty-fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="4879482699"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 
                 
                 
@@ -1033,13 +928,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The materials HR gave her had intentional omissions...</p>
-                
-                
-                
                 
                 
                 
@@ -1049,13 +938,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Hugo never expected Evelyn could reconstruct the missing content just by listening to others&#39; reports.</p>
-                
-                
-                
                 
                 
                 
@@ -1065,13 +948,7 @@
                 
                 
                 
-                
-                
-                
                 <p>All he wanted was to humiliate her publicly.</p>
-                
-                
-                
                 
                 
                 
@@ -1081,13 +958,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The memory of Melissa&#39;s haggard, deranged state during yesterday&#39;s prison visit made his fists clench.</p>
-                
-                
-                
                 
                 
                 
@@ -1097,13 +968,7 @@
                 
                 
                 
-                
-                
-                
                 <p>She concluded smoothly and returned to her seat.</p>
-                
-                
-                
                 
                 
                 
@@ -1113,13 +978,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Well done. Next.&#34; His nod acknowledged her performance.</p>
-                
-                
-                
                 
                 
                 
@@ -1129,13 +988,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;I have a new proposal to present.&#34; He produced a document.</p>
-                
-                
-                
                 
                 
                 
@@ -1145,13 +998,7 @@
                 
                 
                 
-                
-                
-                
                 <p>As Xavier began reading, she rose discreetly.</p>
-                
-                
-                
                 
                 
                 
@@ -1161,13 +1008,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Apologies, I forgot a file.&#34; She offered the excuse casually.</p>
-                
-                
-                
                 
                 
                 
@@ -1177,13 +1018,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Xavier frowned at Evelyn&#39;s retreating figure.</p>
-                
-                
-                
                 
                 
                 
@@ -1193,13 +1028,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Right.&#34; Xavier lowered his head to resume.</p>
-                
-                
-                
                 
                 
                 
@@ -1209,13 +1038,7 @@
                 
                 
                 
-                
-                
-                
                 <p>......</p>
-                
-                
-                
                 
                 
                 
@@ -1225,13 +1048,7 @@
                 
                 
                 
-                
-                
-                
                 <p>In the print room, a male employee kicked Roman hard in the ribs.</p>
-                
-                
-                
                 
                 
                 
@@ -1241,13 +1058,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman curled on the floor, clutching his stomach in pain.</p>
-                
-                
-                
                 
                 
                 
@@ -1257,13 +1068,7 @@
                 
                 
                 
-                
-                
-                
                 <p>That morning, he&#39;d been heading to the meeting with his proposal when someone tripped him from behind—sending him crashing into Wendy.</p>
-                
-                
-                
                 
                 
                 
@@ -1273,13 +1078,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Colleagues dragged him into the print room without question, beating him relentlessly.</p>
-                
-                
-                
                 
                 
                 
@@ -1289,13 +1088,7 @@
                 
                 
                 
-                
-                
-                
                 <p>None of that mattered to him.</p>
-                
-                
-                
                 
                 
                 
@@ -1305,13 +1098,7 @@
                 
                 
                 
-                
-                
-                
                 <p>It represented all his effort, his only hope.</p>
-                
-                
-                
                 
                 
                 
@@ -1321,13 +1108,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Had someone stolen it?</p>
-                
-                
-                
                 
                 
                 
@@ -1337,13 +1118,7 @@
                 
                 
                 
-                
-                
-                
                 <p>But the colleagues blocking the exit told him this wouldn&#39;t end easily.</p>
-                
-                
-                
                 
                 
                 
@@ -1353,13 +1128,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman&#39;s pupils contracted.</p>
-                
-                
-                
                 
                 
                 
@@ -1369,13 +1138,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman&#39;s breath hitched.</p>
-                
-                
-                
                 
                 
                 
@@ -1385,13 +1148,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman stayed silent on the floor.</p>
-                
-                
-                
                 
                 
                 
@@ -1401,13 +1158,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;She sold you out to suck up to our department,&#34; Wendy added. &#34;She needs us now.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1417,13 +1168,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman didn&#39;t react.</p>
-                
-                
-                
                 
                 
                 
@@ -1433,13 +1178,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Open up. I need to print something for the meeting.&#34; Evelyn&#39;s voice was clear.</p>
-                
-                
-                
                 
                 
                 
@@ -1449,13 +1188,7 @@
                 
                 
                 
-                
-                
-                
                 <p>They yanked Roman up, hastily straightening his clothes.</p>
-                
-                
-                
                 
                 
                 
@@ -1465,13 +1198,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Wendy opened the door with a simpering smile. &#34;Evelyn, why print yourself? No assistants in the meeting?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1481,13 +1208,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman&#39;s head jerked up in disbelief.</p>
-                
-                
-                
                 
                 
                 
@@ -1497,13 +1218,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Come with me,&#34; Evelyn told Roman.</p>
-                
-                
-                
                 
                 
                 
@@ -1513,13 +1228,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Evelyn!&#34; Wendy stammered. &#34;I thought you needed to print—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1529,13 +1238,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Wendy didn&#39;t dare stop them.</p>
-                
-                
-                
                 
                 
                 
@@ -1545,13 +1248,7 @@
                 
                 
                 
-                
-                
-                
                 <p>As they hurried toward the conference room, Evelyn paused. &#34;Fix your appearance.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1561,13 +1258,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Xavier&#39;s already presented your proposal,&#34; Evelyn murmured. &#34;Play it smart inside.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1577,13 +1268,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The proposal was just the prelude. His real goal was...</p>
-                
-                
-                
                 
                 
                 
@@ -1593,13 +1278,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Xavier&#39;s face twisted at Roman&#39;s entrance, then settled into a venomous smirk.</p>
-                
-                
-                
                 
                 
                 
@@ -1609,13 +1288,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman noticed too. Clutching his aching ribs, his vision darkened as he collapsed.</p>
-                
-                
-                
                 
                 
                 
@@ -1625,13 +1298,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The meeting halted as they carried Roman to the lounge, debating an ambulance.</p>
-                
-                
-                
                 
                 
                 
@@ -1641,13 +1308,7 @@
                 
                 
                 
-                
-                
-                
                 <p>He ushered everyone out—except Evelyn, who watched coldly.</p>
-                
-                
-                
                 
                 
                 
@@ -1657,13 +1318,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Xavier played uncharacteristically helpful. &#34;Easy there. My family just called—my mother&#39;s unwell. My father left already...&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1673,13 +1328,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Roman seized Xavier&#39;s collar. &#34;That&#39;s my work!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1689,13 +1338,7 @@
                 
                 
                 
-                
-                
-                
                 <p>He smirked at Evelyn. &#34;You&#39;re so good to me. From now on, your word is law in our department.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1705,13 +1348,7 @@
                 
                 
                 
-                
-                
-                
                 <p>He wasn&#39;t just a spoiled heir—he had cunning too.</p>
-                
-                
-                
                 
                 
                 
@@ -1721,13 +1358,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Evelyn would never betray me or ally with you!&#34; Roman&#39;s chest heaved with rage.</p>
-                
-                
-                
                 
                 
                 
@@ -1737,13 +1368,7 @@
                 
                 
                 
-                
-                
-                
                 <p>That Xavier and Wendy thought they could turn him against her was laughable.</p>
-                
-                
-                
                 
                 
                 
@@ -1753,13 +1378,7 @@
                 
                 
                 
-                
-                
-                
                 <p>That Kingsley&#39;s heir and Horizon&#39;s crown prince had clashed over her—yet she walked away unscathed.</p>
-                
-                
-                
                 
                 
                 
@@ -1769,13 +1388,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Xavier shoved him back. &#34;Steal from you? You&#39;re beneath me! Get lost before I make you.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1785,13 +1398,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Not interested,&#34; Evelyn cut in coldly. &#34;Give up.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1801,13 +1408,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Let me advise you too,&#34; Evelyn said icily. &#34;What isn&#39;t yours will cost you doubly.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1817,13 +1418,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Ungrateful bitch!&#34; His curses faded down the hall. &#34;Since you want it hard, don&#39;t blame me!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -3258,6 +2853,31 @@
             }
         }
 
+        // Facebook Pixel: Track first Next button click
+        let nextClickTracked = false;
+        const nextChapterBtn = document.getElementById('next-chapter');
+        
+        if (nextChapterBtn && !nextChapterBtn.disabled) {
+            nextChapterBtn.addEventListener('click', function(e) {
+                // Track first click event
+                if (!nextClickTracked) {
+                    if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                        if (typeof fbq !== 'undefined') {
+                            fbq('trackCustom', 'FirstNextClick', {
+                                content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                content_category: 'Novel',
+                                chapter_number: 249
+                            });
+                            console.log('Facebook事件已发送: FirstNextClick (首次点击下一章)');
+                        }
+                    } else {
+                        console.log('Facebook事件已跳过: FirstNextClick (本72小时内已发送)');
+                    }
+                    nextClickTracked = true;
+                }
+            });
+        }
+
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (e.key === 'ArrowLeft') {
@@ -3268,6 +2888,21 @@
             } else if (e.key === 'ArrowRight') {
                 const nextBtn = document.getElementById('next-chapter');
                 if (nextBtn && !nextBtn.disabled) {
+                    // Track first next click via keyboard
+                    if (!nextClickTracked) {
+                        if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                            if (typeof fbq !== 'undefined') {
+                                fbq('trackCustom', 'FirstNextClick', {
+                                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                    content_category: 'Novel',
+                                    chapter_number: 249,
+                                    click_type: 'keyboard'
+                                });
+                                console.log('Facebook事件已发送: FirstNextClick (首次点击下一章-键盘)');
+                            }
+                        }
+                        nextClickTracked = true;
+                    }
                     window.location.href = addTrackingParams(nextBtn.href);
                 }
             } else if (e.key === 'Escape') {
@@ -3486,13 +3121,13 @@
                 }
                 
                 // Key point 1: Guide trigger mechanism
-                this.REQUIRED_ADS = 15; // Required cumulative ad count across pages
-                this.TRIGGER_PROBABILITY = 0.78; // 78%% trigger probability
-                this.COOLDOWN_MINUTES = 10; // 10 minutes cooldown time
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds(); // Random ad count 1-20 (session-persistent)
+                this.TRIGGER_PROBABILITY = 0.8; // 80% trigger probability
+                this.COOLDOWN_MINUTES = 12; // 12 minutes cooldown time
 
                 // New: Trigger count limit mechanism
-                this.MAX_TRIGGERS = 1; // Maximum trigger count limit
-                this.TRIGGER_COOLDOWN_HOURS = 3; // 3 hour cooldown after reaching max triggers
+                this.MAX_TRIGGERS = 5; // Maximum trigger count limit
+                this.TRIGGER_COOLDOWN_HOURS = 1; // 1 hour cooldown after reaching max triggers
                 
                 // State management
                 this.currentPageAds = []; // Current page ads
@@ -3547,6 +3182,36 @@
                 });
                 
                 return isPCBrowser;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
             }
 
             // Get cross-page cumulative ad count
@@ -4417,6 +4082,7 @@
                 localStorage.removeItem('adGuideTriggerCount');
                 localStorage.removeItem('adGuideTriggerCooldownReset');
                 localStorage.removeItem('adGuideLastActiveTime');
+                localStorage.removeItem('adGuideRequiredAds');
                 this.totalAdsSeen = 0;
                 this.triggerCount = 0;
                 this.currentPageAds = [];
@@ -4425,6 +4091,8 @@
                 }
                 // Ensure scroll monitoring is stopped
                 this.stopScrollMonitoring();
+                // Regenerate required ads count
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds();
                 console.log('Ad guide: All data reset (including cross-page cumulative data, trigger count, and last active time)');
                 this.updateDebugInfo();
                 // Update last active time after reset

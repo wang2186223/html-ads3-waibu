@@ -129,10 +129,10 @@
     
     <!-- Time Meta Tags for SEO -->
     
-    <meta property="article:published_time" content="2025-11-07T13:29:57.350487">
-    <meta property="article:modified_time" content="2025-11-07T13:29:57.350487">
-    <meta name="date" content="2025-11-07">
-    <meta name="last-modified" content="2025-11-07 13:29:57">
+    <meta property="article:published_time" content="2026-02-04T15:08:38.456880">
+    <meta property="article:modified_time" content="2026-02-04T15:08:38.456880">
+    <meta name="date" content="2026-02-04">
+    <meta name="last-modified" content="2026-02-04 15:08:38">
     
     
     <!-- Open Graph Meta Tags -->
@@ -162,6 +162,7 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
          crossorigin="anonymous"></script>
+
     
     <!-- Facebook Pixel Code -->
     <script>
@@ -174,7 +175,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '835106315764533');
+    fbq('init', '747225277772713');
     
     // Natural 72-hour event tracking prevention (resets every 3 days)
     function shouldTrackEvent(eventName) {
@@ -210,21 +211,29 @@
         const readingTime = (currentTime - readingStartTime) / 1000 / 60; // in minutes
         
         if (!oneMinuteSent && readingTime >= 1) {
-            if (shouldTrackEvent('1m_web')) {
-                fbq('track', '1m_web');
-                console.log('Facebook事件已发送: 1m_web (用户阅读1分钟)');
+            if (shouldTrackEvent('ReadOneMinute')) {
+                fbq('trackCustom', 'ReadOneMinute', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 1
+                });
+                console.log('Facebook事件已发送: ReadOneMinute (用户阅读1分钟)');
             } else {
-                console.log('Facebook事件已跳过: 1m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadOneMinute (本72小时内已发送)');
             }
             oneMinuteSent = true;
         }
         
         if (!tenMinutesSent && readingTime >= 10) {
-            if (shouldTrackEvent('10m_web')) {
-                fbq('track', '10m_web');
-                console.log('Facebook事件已发送: 10m_web (用户阅读10分钟)');
+            if (shouldTrackEvent('ReadTenMinutes')) {
+                fbq('trackCustom', 'ReadTenMinutes', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 10
+                });
+                console.log('Facebook事件已发送: ReadTenMinutes (用户阅读10分钟)');
             } else {
-                console.log('Facebook事件已跳过: 10m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadTenMinutes (本72小时内已发送)');
             }
             tenMinutesSent = true;
         }
@@ -241,7 +250,7 @@
     });
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=835106315764533&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=747225277772713&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
     
@@ -259,7 +268,7 @@
             };
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -278,7 +287,7 @@
                 userIP: 'Unknown'
             };
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -340,7 +349,7 @@
             console.log('Ad guide: Sending data to Google Apps Script:', data);
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -371,7 +380,7 @@
             
             console.log('Ad guide: Sending data with Unknown IP:', data);
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -712,8 +721,8 @@
             "@type": "Person",
             "name": "Unknown Author"
         },
-        "datePublished": "2025-11-07T13:29:57.350487",
-        "dateModified": "2025-11-07T13:29:57.350487",
+        "datePublished": "2026-02-04T15:08:38.456880",
+        "dateModified": "2026-02-04T15:08:38.456880",
         "publisher": {
             "@type": "Organization",
             "name": "NovelVibe",
@@ -794,13 +803,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;I never meant to hurt you.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -810,34 +813,12 @@
                 
                 
                 
-                
-                
-                
                 <p>Never meant to?</p>
                 
                 
                 
                 
-                
-                
-                
                 <p>Then why did every memory of him after their breakup feel like retaliation?</p>
-                
-                
-                <!-- AdSense In-Article Ad after fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="2860480551"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
-                
                 
                 
                 
@@ -847,13 +828,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Do you like the roses?&#34; Alexander suddenly asked.</p>
-                
-                
-                
                 
                 
                 
@@ -863,13 +838,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The unfamiliarity and confusion in her eyes made his brow furrow.</p>
-                
-                
-                
                 
                 
                 
@@ -879,13 +848,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;I don&#39;t know what game you&#39;re playing,&#34; Evelyn met his gaze, self-mockery outweighing bewilderment in her eyes. &#34;Alexander, we&#39;re over. Isn&#39;t this pathetic?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -895,13 +858,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Now that she wanted nothing, he forced it upon her.</p>
-                
-                
-                
                 
                 
                 
@@ -911,26 +868,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Her lips, crimson as blood, formed words sharp as blades.</p>
-                
-                
-                
-                <!-- AdSense In-Article Ad after fifteenth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="1547398888"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
                 
                 
                 
@@ -940,13 +878,7 @@
                 
                 
                 
-                
-                
-                
                 <p>This Evelyn reminded him of the spoiled princess he&#39;d first met - beloved by her parents, secure in her status, looking down her nose at him.</p>
-                
-                
-                
                 
                 
                 
@@ -956,13 +888,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The loss of control agitated him.</p>
-                
-                
-                
                 
                 
                 
@@ -972,13 +898,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Take it back! I never agreed to break up!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -988,13 +908,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander always resorted to force when emotions ran high.</p>
-                
-                
-                
                 
                 
                 
@@ -1004,26 +918,7 @@
                 
                 
                 
-                
-                
-                
                 <p>She&#39;d foolishly mistaken it for love.</p>
-                
-                
-                
-                
-                <!-- AdSense In-Article Ad after twenty-fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="4879482699"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 
                 
                 
@@ -1033,13 +928,7 @@
                 
                 
                 
-                
-                
-                
                 <p>He&#39;d never treated her as human, just a disposable object.</p>
-                
-                
-                
                 
                 
                 
@@ -1049,13 +938,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Might as well lay everything bare today.</p>
-                
-                
-                
                 
                 
                 
@@ -1065,13 +948,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;I gave you a choice?&#34; Alexander laughed bitterly. &#34;I only asked for an apology, and you threw a breakup at me!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1081,13 +958,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The one who forced her to choose.</p>
-                
-                
-                
                 
                 
                 
@@ -1097,13 +968,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Whatever.&#34; Sudden exhaustion washed over her.</p>
-                
-                
-                
                 
                 
                 
@@ -1113,13 +978,7 @@
                 
                 
                 
-                
-                
-                
                 <p>To stop dwelling on the past.</p>
-                
-                
-                
                 
                 
                 
@@ -1129,13 +988,7 @@
                 
                 
                 
-                
-                
-                
                 <p>His people had struck her.</p>
-                
-                
-                
                 
                 
                 
@@ -1145,13 +998,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;That&#39;s not...&#34; Alexander knew the truth.</p>
-                
-                
-                
                 
                 
                 
@@ -1161,13 +1008,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Answer me,&#34; Evelyn gritted through shoulder pain. &#34;At the sanatorium, was it Madam Zade who helped recover my memories?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1177,13 +1018,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Why did you never tell me about my past? Why hide even my parents&#39; history?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1193,13 +1028,7 @@
                 
                 
                 
-                
-                
-                
                 <p>However kind the Kingsleys were, her heart remained unsettled.</p>
-                
-                
-                
                 
                 
                 
@@ -1209,13 +1038,7 @@
                 
                 
                 
-                
-                
-                
                 <p>She&#39;d once deluded herself into thinking it was for her protection.</p>
-                
-                
-                
                 
                 
                 
@@ -1225,13 +1048,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;So this is why you chose Julian Ashford, why you betrayed the Kingsleys.&#34; Alexander released her.</p>
-                
-                
-                
                 
                 
                 
@@ -1241,13 +1058,7 @@
                 
                 
                 
-                
-                
-                
                 <p>After all he&#39;d invested, she still walked away.</p>
-                
-                
-                
                 
                 
                 
@@ -1257,13 +1068,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Was the past so important?</p>
-                
-                
-                
                 
                 
                 
@@ -1273,13 +1078,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Evelyn turned away, too weary to explain.</p>
-                
-                
-                
                 
                 
                 
@@ -1289,13 +1088,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Not worth it anymore...</p>
-                
-                
-                
                 
                 
                 
@@ -1305,13 +1098,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;And then?&#34; The question burst from Alexander.</p>
-                
-                
-                
                 
                 
                 
@@ -1321,13 +1108,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Evelyn looked at him.</p>
-                
-                
-                
                 
                 
                 
@@ -1337,13 +1118,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Forever?</p>
-                
-                
-                
                 
                 
                 
@@ -1353,13 +1128,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Even if she wanted to, would Isabella Winslow wait?</p>
-                
-                
-                
                 
                 
                 
@@ -1369,13 +1138,7 @@
                 
                 
                 
-                
-                
-                
                 <p>There would be no bridge to cross...</p>
-                
-                
-                
                 
                 
                 
@@ -1385,13 +1148,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Nathan Carter and Iris Cooper chatted outside the door.</p>
-                
-                
-                
                 
                 
                 
@@ -1401,13 +1158,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Nathan sighed. &#34;We&#39;re exhausted too. Handling so much money daily - no room for error.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1417,13 +1168,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Apples and oranges! Your salaries versus ours? You&#39;re the elite - we&#39;re called paparazzi scum.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1433,13 +1178,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander strode toward the elevator.</p>
-                
-                
-                
                 
                 
                 
@@ -1449,13 +1188,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Iris bit her lip, gathered courage, and chased after them.</p>
-                
-                
-                
                 
                 
                 
@@ -1465,13 +1198,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander turned.</p>
-                
-                
-                
                 
                 
                 
@@ -1481,13 +1208,7 @@
                 
                 
                 
-                
-                
-                
                 <p>But having started, she pressed on.</p>
-                
-                
-                
                 
                 
                 
@@ -1497,13 +1218,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Why?&#34; Alexander asked.</p>
-                
-                
-                
                 
                 
                 
@@ -1513,13 +1228,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Lord Alex, countless girls would kill to stand by your side - for money or the man. But Evelyn&#39;s different...&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1529,13 +1238,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The pressure intensified.</p>
-                
-                
-                
                 
                 
                 
@@ -1545,13 +1248,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;That article she wrote about you? She was framed by a colleague...&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -2986,6 +2683,31 @@
             }
         }
 
+        // Facebook Pixel: Track first Next button click
+        let nextClickTracked = false;
+        const nextChapterBtn = document.getElementById('next-chapter');
+        
+        if (nextChapterBtn && !nextChapterBtn.disabled) {
+            nextChapterBtn.addEventListener('click', function(e) {
+                // Track first click event
+                if (!nextClickTracked) {
+                    if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                        if (typeof fbq !== 'undefined') {
+                            fbq('trackCustom', 'FirstNextClick', {
+                                content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                content_category: 'Novel',
+                                chapter_number: 103
+                            });
+                            console.log('Facebook事件已发送: FirstNextClick (首次点击下一章)');
+                        }
+                    } else {
+                        console.log('Facebook事件已跳过: FirstNextClick (本72小时内已发送)');
+                    }
+                    nextClickTracked = true;
+                }
+            });
+        }
+
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (e.key === 'ArrowLeft') {
@@ -2996,6 +2718,21 @@
             } else if (e.key === 'ArrowRight') {
                 const nextBtn = document.getElementById('next-chapter');
                 if (nextBtn && !nextBtn.disabled) {
+                    // Track first next click via keyboard
+                    if (!nextClickTracked) {
+                        if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                            if (typeof fbq !== 'undefined') {
+                                fbq('trackCustom', 'FirstNextClick', {
+                                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                    content_category: 'Novel',
+                                    chapter_number: 103,
+                                    click_type: 'keyboard'
+                                });
+                                console.log('Facebook事件已发送: FirstNextClick (首次点击下一章-键盘)');
+                            }
+                        }
+                        nextClickTracked = true;
+                    }
                     window.location.href = addTrackingParams(nextBtn.href);
                 }
             } else if (e.key === 'Escape') {
@@ -3214,13 +2951,13 @@
                 }
                 
                 // Key point 1: Guide trigger mechanism
-                this.REQUIRED_ADS = 15; // Required cumulative ad count across pages
-                this.TRIGGER_PROBABILITY = 0.78; // 78%% trigger probability
-                this.COOLDOWN_MINUTES = 10; // 10 minutes cooldown time
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds(); // Random ad count 1-20 (session-persistent)
+                this.TRIGGER_PROBABILITY = 0.8; // 80% trigger probability
+                this.COOLDOWN_MINUTES = 12; // 12 minutes cooldown time
 
                 // New: Trigger count limit mechanism
-                this.MAX_TRIGGERS = 1; // Maximum trigger count limit
-                this.TRIGGER_COOLDOWN_HOURS = 3; // 3 hour cooldown after reaching max triggers
+                this.MAX_TRIGGERS = 5; // Maximum trigger count limit
+                this.TRIGGER_COOLDOWN_HOURS = 1; // 1 hour cooldown after reaching max triggers
                 
                 // State management
                 this.currentPageAds = []; // Current page ads
@@ -3275,6 +3012,36 @@
                 });
                 
                 return isPCBrowser;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
             }
 
             // Get cross-page cumulative ad count
@@ -4145,6 +3912,7 @@
                 localStorage.removeItem('adGuideTriggerCount');
                 localStorage.removeItem('adGuideTriggerCooldownReset');
                 localStorage.removeItem('adGuideLastActiveTime');
+                localStorage.removeItem('adGuideRequiredAds');
                 this.totalAdsSeen = 0;
                 this.triggerCount = 0;
                 this.currentPageAds = [];
@@ -4153,6 +3921,8 @@
                 }
                 // Ensure scroll monitoring is stopped
                 this.stopScrollMonitoring();
+                // Regenerate required ads count
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds();
                 console.log('Ad guide: All data reset (including cross-page cumulative data, trigger count, and last active time)');
                 this.updateDebugInfo();
                 // Update last active time after reset

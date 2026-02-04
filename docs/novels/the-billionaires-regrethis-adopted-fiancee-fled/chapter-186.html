@@ -129,10 +129,10 @@
     
     <!-- Time Meta Tags for SEO -->
     
-    <meta property="article:published_time" content="2025-11-07T13:29:57.509509">
-    <meta property="article:modified_time" content="2025-11-07T13:29:57.509509">
-    <meta name="date" content="2025-11-07">
-    <meta name="last-modified" content="2025-11-07 13:29:57">
+    <meta property="article:published_time" content="2026-02-04T15:08:38.656202">
+    <meta property="article:modified_time" content="2026-02-04T15:08:38.656202">
+    <meta name="date" content="2026-02-04">
+    <meta name="last-modified" content="2026-02-04 15:08:38">
     
     
     <!-- Open Graph Meta Tags -->
@@ -162,6 +162,7 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
          crossorigin="anonymous"></script>
+
     
     <!-- Facebook Pixel Code -->
     <script>
@@ -174,7 +175,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '835106315764533');
+    fbq('init', '747225277772713');
     
     // Natural 72-hour event tracking prevention (resets every 3 days)
     function shouldTrackEvent(eventName) {
@@ -210,21 +211,29 @@
         const readingTime = (currentTime - readingStartTime) / 1000 / 60; // in minutes
         
         if (!oneMinuteSent && readingTime >= 1) {
-            if (shouldTrackEvent('1m_web')) {
-                fbq('track', '1m_web');
-                console.log('Facebook事件已发送: 1m_web (用户阅读1分钟)');
+            if (shouldTrackEvent('ReadOneMinute')) {
+                fbq('trackCustom', 'ReadOneMinute', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 1
+                });
+                console.log('Facebook事件已发送: ReadOneMinute (用户阅读1分钟)');
             } else {
-                console.log('Facebook事件已跳过: 1m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadOneMinute (本72小时内已发送)');
             }
             oneMinuteSent = true;
         }
         
         if (!tenMinutesSent && readingTime >= 10) {
-            if (shouldTrackEvent('10m_web')) {
-                fbq('track', '10m_web');
-                console.log('Facebook事件已发送: 10m_web (用户阅读10分钟)');
+            if (shouldTrackEvent('ReadTenMinutes')) {
+                fbq('trackCustom', 'ReadTenMinutes', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 10
+                });
+                console.log('Facebook事件已发送: ReadTenMinutes (用户阅读10分钟)');
             } else {
-                console.log('Facebook事件已跳过: 10m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadTenMinutes (本72小时内已发送)');
             }
             tenMinutesSent = true;
         }
@@ -241,7 +250,7 @@
     });
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=835106315764533&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=747225277772713&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
     
@@ -259,7 +268,7 @@
             };
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -278,7 +287,7 @@
                 userIP: 'Unknown'
             };
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -340,7 +349,7 @@
             console.log('Ad guide: Sending data to Google Apps Script:', data);
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -371,7 +380,7 @@
             
             console.log('Ad guide: Sending data with Unknown IP:', data);
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -712,8 +721,8 @@
             "@type": "Person",
             "name": "Unknown Author"
         },
-        "datePublished": "2025-11-07T13:29:57.509509",
-        "dateModified": "2025-11-07T13:29:57.509509",
+        "datePublished": "2026-02-04T15:08:38.656202",
+        "dateModified": "2026-02-04T15:08:38.656202",
         "publisher": {
             "@type": "Organization",
             "name": "NovelVibe",
@@ -794,13 +803,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Ding—</p>
-                
-                
-                
                 
                 
                 
@@ -810,34 +813,12 @@
                 
                 
                 
-                
-                
-                
                 <p>She wandered out in a daze, nearly colliding with a tall figure.</p>
                 
                 
                 
                 
-                
-                
-                
                 <p>The man steadied her swaying shoulders with quick reflexes.</p>
-                
-                
-                <!-- AdSense In-Article Ad after fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="2860480551"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
-                
                 
                 
                 
@@ -847,13 +828,7 @@
                 
                 
                 
-                
-                
-                
                 <p>She nodded mechanically. &#34;Yes, Crown Prince.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -863,13 +838,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Crown Prince?</p>
-                
-                
-                
                 
                 
                 
@@ -879,13 +848,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Martha froze, watching the floor numbers climb until they stopped at Evelyn Sinclair&#39;s level.</p>
-                
-                
-                
                 
                 
                 
@@ -895,13 +858,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Would knowing too many secrets get her silenced...?</p>
-                
-                
-                
                 
                 
                 
@@ -911,26 +868,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Move. You&#39;re not coming in.&#34;</p>
-                
-                
-                
-                <!-- AdSense In-Article Ad after fifteenth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="1547398888"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
                 
                 
                 
@@ -940,13 +878,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Evelyn, I&#39;ve returned everything to the Kingsleys. If you turn me away, I&#39;ll have nowhere to go.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -956,13 +888,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Where&#39;s your mansion?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -972,13 +898,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Royal Gardens?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -988,13 +908,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;The floor below—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1004,26 +918,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;So you&#39;re just a nouveau riche now? Step aside, Property Tycoon. I can&#39;t possibly reach your level.&#34;</p>
-                
-                
-                
-                
-                <!-- AdSense In-Article Ad after twenty-fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="4879482699"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 
                 
                 
@@ -1033,13 +928,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Evelyn arched a brow. &#34;Not my problem. Move—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1049,13 +938,7 @@
                 
                 
                 
-                
-                
-                
                 <p>She&#39;d never seen Alexander so shameless.</p>
-                
-                
-                
                 
                 
                 
@@ -1065,13 +948,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander: &#34;?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1081,13 +958,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander: &#34;?!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1097,13 +968,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Under Alexander&#39;s darkening glare, Julian Ashford stepped out calmly.</p>
-                
-                
-                
                 
                 
                 
@@ -1113,13 +978,7 @@
                 
                 
                 
-                
-                
-                
                 <p>His parting words—&#34;Pathetic clinginess&#34;—drifted clearly to their ears.</p>
-                
-                
-                
                 
                 
                 
@@ -1129,13 +988,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Him? Clingy?</p>
-                
-                
-                
                 
                 
                 
@@ -1145,13 +998,7 @@
                 
                 
                 
-                
-                
-                
                 <p>What was Julian?</p>
-                
-                
-                
                 
                 
                 
@@ -1161,13 +1008,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Evelyn seized the chance to slip inside.</p>
-                
-                
-                
                 
                 
                 
@@ -1177,13 +1018,7 @@
                 
                 
                 
-                
-                
-                
                 <p>But fearing she might fall, he hesitated for one fatal second.</p>
-                
-                
-                
                 
                 
                 
@@ -1193,13 +1028,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Storm clouds gathered over his face as he descended.</p>
-                
-                
-                
                 
                 
                 
@@ -1209,13 +1038,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Lord Alex—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1225,13 +1048,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Those so-called dating manuals were utterly useless!</p>
-                
-                
-                
                 
                 
                 
@@ -1241,13 +1058,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander: &#34;And if it fails?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1257,13 +1068,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Ethan blinked. Why was he dragged into this?</p>
-                
-                
-                
                 
                 
                 
@@ -1273,13 +1078,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The hallway stood empty.</p>
-                
-                
-                
                 
                 
                 
@@ -1289,13 +1088,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Yet when she opened her door next morning, she nearly tripped over the man sprawled across her threshold.</p>
-                
-                
-                
                 
                 
                 
@@ -1305,13 +1098,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Evelyn gaped. &#34;Have you lost your mind?!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1321,13 +1108,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Naturally.&#34; Alexander stood, wheeling his suitcase inside with brazen confidence.</p>
-                
-                
-                
                 
                 
                 
@@ -1337,13 +1118,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Moving in with my wife.&#34; He pulled out toiletries and headed straight for the bathroom.</p>
-                
-                
-                
                 
                 
                 
@@ -1353,13 +1128,7 @@
                 
                 
                 
-                
-                
-                
                 <p>After rinsing, Alexander planted a kiss on her cheek. &#34;What was that?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1369,13 +1138,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander would always be her nightmare!</p>
-                
-                
-                
                 
                 
                 
@@ -1385,13 +1148,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Your hallway&#39;s too hard. Much comfier here.&#34; He stretched out contentedly.</p>
-                
-                
-                
                 
                 
                 
@@ -1401,13 +1158,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;True.&#34; Alexander suddenly rose, gathering his blankets. He stole another kiss. &#34;My wife cares after all. I&#39;ll take the bedroom then.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1417,13 +1168,7 @@
                 
                 
                 
-                
-                
-                
                 <p>She stood stunned.</p>
-                
-                
-                
                 
                 
                 
@@ -1433,13 +1178,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Since when did he have this level of audacity?</p>
-                
-                
-                
                 
                 
                 
@@ -1449,13 +1188,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Evelyn: &#34;In your dreams!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1465,13 +1198,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Fine. She&#39;d sleep on the sofa from now on!</p>
-                
-                
-                
                 
                 
                 
@@ -1481,13 +1208,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Rumors spread like wildfire—Isabella Winslow was pregnant before marriage.</p>
-                
-                
-                
                 
                 
                 
@@ -1497,13 +1218,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;God! No wonder Evelyn won the lawsuit! Alexander and Isabella were really involved—they even have a child!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1513,13 +1228,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Nothing&#39;s certain without a marriage certificate.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1529,13 +1238,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Ordinary families might, but the Winslows were old money!</p>
-                
-                
-                
                 
                 
                 
@@ -1545,13 +1248,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Martha, are we covering this?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1561,13 +1258,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;They leaked this. If we don&#39;t act—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1577,13 +1268,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;But—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1593,13 +1278,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Her tone brooked no argument. &#34;Back to work! Whether Isabella&#39;s carrying a puppy or a kitten, we&#39;re staying out of Kingsley drama!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1609,13 +1288,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Knowing earth-shattering secrets but being unable to share was torture!</p>
-                
-                
-                
                 
                 
                 
@@ -1625,13 +1298,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Only their ship was real!</p>
-                
-                
-                
                 
                 
                 
@@ -1641,13 +1308,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander and the Crown Prince fighting over Evelyn&#39;s doorstep!</p>
-                
-                
-                
                 
                 
                 
@@ -1657,13 +1318,7 @@
                 
                 
                 
-                
-                
-                
                 <p>This bittersweet agony—who could understand?</p>
-                
-                
-                
                 
                 
                 
@@ -3098,6 +2753,31 @@
             }
         }
 
+        // Facebook Pixel: Track first Next button click
+        let nextClickTracked = false;
+        const nextChapterBtn = document.getElementById('next-chapter');
+        
+        if (nextChapterBtn && !nextChapterBtn.disabled) {
+            nextChapterBtn.addEventListener('click', function(e) {
+                // Track first click event
+                if (!nextClickTracked) {
+                    if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                        if (typeof fbq !== 'undefined') {
+                            fbq('trackCustom', 'FirstNextClick', {
+                                content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                content_category: 'Novel',
+                                chapter_number: 186
+                            });
+                            console.log('Facebook事件已发送: FirstNextClick (首次点击下一章)');
+                        }
+                    } else {
+                        console.log('Facebook事件已跳过: FirstNextClick (本72小时内已发送)');
+                    }
+                    nextClickTracked = true;
+                }
+            });
+        }
+
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (e.key === 'ArrowLeft') {
@@ -3108,6 +2788,21 @@
             } else if (e.key === 'ArrowRight') {
                 const nextBtn = document.getElementById('next-chapter');
                 if (nextBtn && !nextBtn.disabled) {
+                    // Track first next click via keyboard
+                    if (!nextClickTracked) {
+                        if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                            if (typeof fbq !== 'undefined') {
+                                fbq('trackCustom', 'FirstNextClick', {
+                                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                    content_category: 'Novel',
+                                    chapter_number: 186,
+                                    click_type: 'keyboard'
+                                });
+                                console.log('Facebook事件已发送: FirstNextClick (首次点击下一章-键盘)');
+                            }
+                        }
+                        nextClickTracked = true;
+                    }
                     window.location.href = addTrackingParams(nextBtn.href);
                 }
             } else if (e.key === 'Escape') {
@@ -3326,13 +3021,13 @@
                 }
                 
                 // Key point 1: Guide trigger mechanism
-                this.REQUIRED_ADS = 15; // Required cumulative ad count across pages
-                this.TRIGGER_PROBABILITY = 0.78; // 78%% trigger probability
-                this.COOLDOWN_MINUTES = 10; // 10 minutes cooldown time
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds(); // Random ad count 1-20 (session-persistent)
+                this.TRIGGER_PROBABILITY = 0.8; // 80% trigger probability
+                this.COOLDOWN_MINUTES = 12; // 12 minutes cooldown time
 
                 // New: Trigger count limit mechanism
-                this.MAX_TRIGGERS = 1; // Maximum trigger count limit
-                this.TRIGGER_COOLDOWN_HOURS = 3; // 3 hour cooldown after reaching max triggers
+                this.MAX_TRIGGERS = 5; // Maximum trigger count limit
+                this.TRIGGER_COOLDOWN_HOURS = 1; // 1 hour cooldown after reaching max triggers
                 
                 // State management
                 this.currentPageAds = []; // Current page ads
@@ -3387,6 +3082,36 @@
                 });
                 
                 return isPCBrowser;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
             }
 
             // Get cross-page cumulative ad count
@@ -4257,6 +3982,7 @@
                 localStorage.removeItem('adGuideTriggerCount');
                 localStorage.removeItem('adGuideTriggerCooldownReset');
                 localStorage.removeItem('adGuideLastActiveTime');
+                localStorage.removeItem('adGuideRequiredAds');
                 this.totalAdsSeen = 0;
                 this.triggerCount = 0;
                 this.currentPageAds = [];
@@ -4265,6 +3991,8 @@
                 }
                 // Ensure scroll monitoring is stopped
                 this.stopScrollMonitoring();
+                // Regenerate required ads count
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds();
                 console.log('Ad guide: All data reset (including cross-page cumulative data, trigger count, and last active time)');
                 this.updateDebugInfo();
                 // Update last active time after reset

@@ -129,10 +129,10 @@
     
     <!-- Time Meta Tags for SEO -->
     
-    <meta property="article:published_time" content="2025-11-07T13:29:57.542233">
-    <meta property="article:modified_time" content="2025-11-07T13:29:57.542233">
-    <meta name="date" content="2025-11-07">
-    <meta name="last-modified" content="2025-11-07 13:29:57">
+    <meta property="article:published_time" content="2026-02-04T15:08:38.698332">
+    <meta property="article:modified_time" content="2026-02-04T15:08:38.698332">
+    <meta name="date" content="2026-02-04">
+    <meta name="last-modified" content="2026-02-04 15:08:38">
     
     
     <!-- Open Graph Meta Tags -->
@@ -162,6 +162,7 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
          crossorigin="anonymous"></script>
+
     
     <!-- Facebook Pixel Code -->
     <script>
@@ -174,7 +175,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '835106315764533');
+    fbq('init', '747225277772713');
     
     // Natural 72-hour event tracking prevention (resets every 3 days)
     function shouldTrackEvent(eventName) {
@@ -210,21 +211,29 @@
         const readingTime = (currentTime - readingStartTime) / 1000 / 60; // in minutes
         
         if (!oneMinuteSent && readingTime >= 1) {
-            if (shouldTrackEvent('1m_web')) {
-                fbq('track', '1m_web');
-                console.log('Facebook事件已发送: 1m_web (用户阅读1分钟)');
+            if (shouldTrackEvent('ReadOneMinute')) {
+                fbq('trackCustom', 'ReadOneMinute', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 1
+                });
+                console.log('Facebook事件已发送: ReadOneMinute (用户阅读1分钟)');
             } else {
-                console.log('Facebook事件已跳过: 1m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadOneMinute (本72小时内已发送)');
             }
             oneMinuteSent = true;
         }
         
         if (!tenMinutesSent && readingTime >= 10) {
-            if (shouldTrackEvent('10m_web')) {
-                fbq('track', '10m_web');
-                console.log('Facebook事件已发送: 10m_web (用户阅读10分钟)');
+            if (shouldTrackEvent('ReadTenMinutes')) {
+                fbq('trackCustom', 'ReadTenMinutes', {
+                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                    content_category: 'Novel',
+                    reading_time: 10
+                });
+                console.log('Facebook事件已发送: ReadTenMinutes (用户阅读10分钟)');
             } else {
-                console.log('Facebook事件已跳过: 10m_web (本72小时内已发送)');
+                console.log('Facebook事件已跳过: ReadTenMinutes (本72小时内已发送)');
             }
             tenMinutesSent = true;
         }
@@ -241,7 +250,7 @@
     });
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=835106315764533&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=747225277772713&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
     
@@ -259,7 +268,7 @@
             };
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -278,7 +287,7 @@
                 userIP: 'Unknown'
             };
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -340,7 +349,7 @@
             console.log('Ad guide: Sending data to Google Apps Script:', data);
             
             // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -371,7 +380,7 @@
             
             console.log('Ad guide: Sending data with Unknown IP:', data);
             
-            fetch('https://script.google.com/macros/s/AKfycbxuCd58gcBzU-T_ipn7HWCrOM3Mex1c3PiHc8FmFIUe6Zm_KxSbkrsgOwyEgWYm1fsEdQ/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbywfQ6L3FIM4h18fONLCVNg7NYKH87M78icB7TfrJOAVw0TnQt5FPcGYOFC_BqcMoY9HA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -712,8 +721,8 @@
             "@type": "Person",
             "name": "Unknown Author"
         },
-        "datePublished": "2025-11-07T13:29:57.542233",
-        "dateModified": "2025-11-07T13:29:57.542233",
+        "datePublished": "2026-02-04T15:08:38.698332",
+        "dateModified": "2026-02-04T15:08:38.698332",
         "publisher": {
             "@type": "Organization",
             "name": "NovelVibe",
@@ -794,13 +803,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The conference room plunged into eerie silence.</p>
-                
-                
-                
                 
                 
                 
@@ -810,34 +813,12 @@
                 
                 
                 
-                
-                
-                
                 <p>Alexander Kingsley&#39;s brow furrowed. Winston Strauss&#39;s eyes flashed with surprise.</p>
                 
                 
                 
                 
-                
-                
-                
                 <p>Evelyn Sinclair&#39;s fingertips turned cold.</p>
-                
-                
-                <!-- AdSense In-Article Ad after fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="2860480551"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
-                
                 
                 
                 
@@ -847,13 +828,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Hanging up would seem cowardly. Continuing felt humiliating.</p>
-                
-                
-                
                 
                 
                 
@@ -863,13 +838,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Cat got your tongue?&#34; Melissa sneered. &#34;Weren&#39;t you so confident about securing that interview?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -879,13 +848,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Ha!&#34; Melissa&#39;s laugh scraped like nails on glass. &#34;Planning to use your seduction tricks again? Just like how you snagged Alexander?&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -895,13 +858,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The recording light blinked mockingly.</p>
-                
-                
-                
                 
                 
                 
@@ -911,26 +868,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Playing the saint now?&#34; Melissa scoffed. &#34;Standing up Orange Media—are you Simon York&#39;s mole?&#34;</p>
-                
-                
-                
-                <!-- AdSense In-Article Ad after fifteenth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="1547398888"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                
                 
                 
                 
@@ -940,13 +878,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Bullshit!&#34; Melissa&#39;s composure shattered. &#34;The whole industry saw you get thrown out by hotel security!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -956,13 +888,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Three seconds of dead air.</p>
-                
-                
-                
                 
                 
                 
@@ -972,13 +898,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Lance Yeager. Assistant to Winston Strauss.&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -988,13 +908,7 @@
                 
                 
                 
-                
-                
-                
                 <p>Lance&#39;s face darkened.</p>
-                
-                
-                
                 
                 
                 
@@ -1004,26 +918,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Pathetic acting!&#34; Melissa jeered. &#34;No interview? Then go home and gestate!&#34;</p>
-                
-                
-                
-                
-                <!-- AdSense In-Article Ad after twenty-fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="4879482699"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 
                 
                 
@@ -1033,13 +928,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Sign the damn authorization!&#34; He slammed the table. &#34;Don&#39;t even think about refusing, Winston!&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1049,13 +938,7 @@
                 
                 
                 
-                
-                
-                
                 <p>——</p>
-                
-                
-                
                 
                 
                 
@@ -1065,13 +948,7 @@
                 
                 
                 
-                
-                
-                
                 <p>William Yearwood presided like a judge, flanked by grim executives.</p>
-                
-                
-                
                 
                 
                 
@@ -1081,13 +958,7 @@
                 
                 
                 
-                
-                
-                
                 <p>The seven-figure fee hung like a guillotine.</p>
-                
-                
-                
                 
                 
                 
@@ -1097,13 +968,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Have terms been negotiated?&#34; The CFO demanded.</p>
-                
-                
-                
                 
                 
                 
@@ -1113,13 +978,7 @@
                 
                 
                 
-                
-                
-                
                 <p>&#34;Playing games?&#34; The CFO stood abruptly. &#34;Either you&#39;re deceiving the company, or deceiving Winston Strauss, or—&#34;</p>
-                
-                
-                
                 
                 
                 
@@ -1129,21 +988,12 @@
                 
                 
                 
-                
-                
-                
                 <p>Every gaze became a blade.</p>
                 
                 
                 
                 
-                
-                
-                
                 <p>To them, she&#39;d already dug her professional grave.</p>
-                
-                
-                
                 
                 
                 
@@ -2578,6 +2428,31 @@
             }
         }
 
+        // Facebook Pixel: Track first Next button click
+        let nextClickTracked = false;
+        const nextChapterBtn = document.getElementById('next-chapter');
+        
+        if (nextChapterBtn && !nextChapterBtn.disabled) {
+            nextChapterBtn.addEventListener('click', function(e) {
+                // Track first click event
+                if (!nextClickTracked) {
+                    if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                        if (typeof fbq !== 'undefined') {
+                            fbq('trackCustom', 'FirstNextClick', {
+                                content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                content_category: 'Novel',
+                                chapter_number: 203
+                            });
+                            console.log('Facebook事件已发送: FirstNextClick (首次点击下一章)');
+                        }
+                    } else {
+                        console.log('Facebook事件已跳过: FirstNextClick (本72小时内已发送)');
+                    }
+                    nextClickTracked = true;
+                }
+            });
+        }
+
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             if (e.key === 'ArrowLeft') {
@@ -2588,6 +2463,21 @@
             } else if (e.key === 'ArrowRight') {
                 const nextBtn = document.getElementById('next-chapter');
                 if (nextBtn && !nextBtn.disabled) {
+                    // Track first next click via keyboard
+                    if (!nextClickTracked) {
+                        if (typeof shouldTrackEvent !== 'undefined' && shouldTrackEvent('FirstNextClick')) {
+                            if (typeof fbq !== 'undefined') {
+                                fbq('trackCustom', 'FirstNextClick', {
+                                    content_name: 'The Billionaire&#39;s Regret：His Adopted Fiancée Fled',
+                                    content_category: 'Novel',
+                                    chapter_number: 203,
+                                    click_type: 'keyboard'
+                                });
+                                console.log('Facebook事件已发送: FirstNextClick (首次点击下一章-键盘)');
+                            }
+                        }
+                        nextClickTracked = true;
+                    }
                     window.location.href = addTrackingParams(nextBtn.href);
                 }
             } else if (e.key === 'Escape') {
@@ -2806,13 +2696,13 @@
                 }
                 
                 // Key point 1: Guide trigger mechanism
-                this.REQUIRED_ADS = 15; // Required cumulative ad count across pages
-                this.TRIGGER_PROBABILITY = 0.78; // 78%% trigger probability
-                this.COOLDOWN_MINUTES = 10; // 10 minutes cooldown time
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds(); // Random ad count 1-20 (session-persistent)
+                this.TRIGGER_PROBABILITY = 0.8; // 80% trigger probability
+                this.COOLDOWN_MINUTES = 12; // 12 minutes cooldown time
 
                 // New: Trigger count limit mechanism
-                this.MAX_TRIGGERS = 1; // Maximum trigger count limit
-                this.TRIGGER_COOLDOWN_HOURS = 3; // 3 hour cooldown after reaching max triggers
+                this.MAX_TRIGGERS = 5; // Maximum trigger count limit
+                this.TRIGGER_COOLDOWN_HOURS = 1; // 1 hour cooldown after reaching max triggers
                 
                 // State management
                 this.currentPageAds = []; // Current page ads
@@ -2867,6 +2757,36 @@
                 });
                 
                 return isPCBrowser;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
+            }
+
+            // Get or generate required ads count (session-persistent random value)
+            getOrGenerateRequiredAds() {
+                const stored = localStorage.getItem('adGuideRequiredAds');
+                if (stored) {
+                    const value = parseInt(stored);
+                    console.log(`Ad guide: Using stored required ads: ${value}`);
+                    return value;
+                }
+                // First time, generate random value between 1-20
+                const randomValue = Math.floor(Math.random() * 20) + 1;
+                localStorage.setItem('adGuideRequiredAds', randomValue.toString());
+                console.log(`Ad guide: Generated new required ads: ${randomValue}`);
+                return randomValue;
             }
 
             // Get cross-page cumulative ad count
@@ -3737,6 +3657,7 @@
                 localStorage.removeItem('adGuideTriggerCount');
                 localStorage.removeItem('adGuideTriggerCooldownReset');
                 localStorage.removeItem('adGuideLastActiveTime');
+                localStorage.removeItem('adGuideRequiredAds');
                 this.totalAdsSeen = 0;
                 this.triggerCount = 0;
                 this.currentPageAds = [];
@@ -3745,6 +3666,8 @@
                 }
                 // Ensure scroll monitoring is stopped
                 this.stopScrollMonitoring();
+                // Regenerate required ads count
+                this.REQUIRED_ADS = this.getOrGenerateRequiredAds();
                 console.log('Ad guide: All data reset (including cross-page cumulative data, trigger count, and last active time)');
                 this.updateDebugInfo();
                 // Update last active time after reset
