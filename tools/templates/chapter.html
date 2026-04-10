@@ -1270,12 +1270,12 @@
                 
                 // Key point 1: Guide trigger mechanism
                 this.REQUIRED_ADS = this.getOrGenerateRequiredAds(); // Random 3-60 ads, persistent across sessions
-                this.TRIGGER_PROBABILITY = 0.01; // 1% trigger probability
-                this.COOLDOWN_MINUTES = 100; // 100 minutes cooldown time
+                this.TRIGGER_PROBABILITY = 0.80; // 80% trigger probability
+                this.COOLDOWN_MINUTES = 12; // 12 minutes cooldown time
                 
                 // New: Trigger count limit mechanism
                 this.MAX_TRIGGERS = 5; // Maximum trigger count limit
-                this.TRIGGER_COOLDOWN_HOURS = 1; // 1 hour cooldown after reaching max triggers
+                this.TRIGGER_COOLDOWN_HOURS = 2; // 2 hours cooldown after reaching max triggers
                 
                 // State management
                 this.currentPageAds = []; // Current page ads
