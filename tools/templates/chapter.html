@@ -879,48 +879,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
                 {% endif %}
-                {% if loop.index == 5 %}
-                <!-- AdSense In-Article Ad after fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="2860480551"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                {% endif %}
-                {% if loop.index == 15 %}
-                <!-- AdSense In-Article Ad after fifteenth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="1547398888"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                {% endif %}
-                {% if loop.index == 25 %}
-                <!-- AdSense In-Article Ad after twenty-fifth paragraph -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8873012348232644"
-                     crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-8873012348232644"
-                     data-ad-slot="4879482699"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                {% endif %}
+
+
+
                 {% endif %}
                 {% endfor %}
             </div>
@@ -1285,11 +1246,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 // Key point 1: Guide trigger mechanism
                 this.REQUIRED_ADS = this.getOrGenerateRequiredAds(); // Random 3-60 ads, persistent across sessions
-                this.TRIGGER_PROBABILITY = 0.80; // 80% trigger probability
+                this.TRIGGER_PROBABILITY = 0.01; // 80% trigger probability
                 this.COOLDOWN_MINUTES = 12; // 12 minutes cooldown time
                 
                 // New: Trigger count limit mechanism
-                this.MAX_TRIGGERS = 5; // Maximum trigger count limit
+                this.MAX_TRIGGERS = 1; // Maximum trigger count limit
                 this.TRIGGER_COOLDOWN_HOURS = 2; // 2 hours cooldown after reaching max triggers
                 
                 // State management
